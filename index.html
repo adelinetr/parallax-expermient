@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <img src="stars_1.svg" id="stars" alt="">
+        <img src="back-m.svg" id="mountains_behind" alt="">
+        <img src="moon.svg" id="moon" alt="">
+        <h2 id="text">Welcome!</h2>
+        <img src="front-m.png" alt="" id="mountains_front">
+    </section>
+    <div class="sec">
+        <h2>Parallax Scrolling Effect </h2><br>
+        <p>Parallax scrolling websites continue to be a popular trend. It was once recommended that sites include as much information above the fold as possible in order to avoid the user having to scroll, but parallax scrolling introduced a way of allowing designers to break away from that by making the act of scrolling itself engaging for the user. 
+        <br><br>
+        The Parallax scrolling technique involves designing the background of a website layout to move at a slower rate than the foreground when the user scrolls, creating a 3D-like effect. Used sparingly, parallax scrolling can add a subtle element of depth that makes the foreground seem to stand out. In other cases, it can be used as the main star of the show for a big visual impact. The technique can encourage users to stay on a page for longer – great for SEO – and to scroll right to the bottom of the content. The examples below show how Parallax scrolling can be used to different degrees to create distinctive and memorable websites.
+        <br><br>
+        For more on web design, check out our guide to the best web design tools and best wireframe tools to help you in your design endeavours. If you fancy pushing the boat out, these impressive CSS animation examples showcase another great way to make your website stand out from the crowd. Want to keep things simple? You need a website builder. For now, though, here are 17 sites that demonstrate how parallax scrolling can be used for effective results.
+        <br><br>
+        After what was a very difficult year for businesses of all kinds in 2020, Squarespace decided to celebrate some of its customers who had launched new ventures against the odds. It commissioned six portraits of success stories that range from the comedian Ziwe Fumudoh to French actor-turned-baker Richard Valls and the fitness studio Good Move. As well as depicting each subject in beautiful illustrations, the whole online project(opens in new tab), including Q&As with each person, is strung together with parallax scrolling that keeps us browsing to the end.
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let mountains_front = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value*0.25 + 'px';
+            moon.style.top = value*1.05 + 'px';
+            mountains_behind.style.top = value*0.05 + 'px';
+            mountains_front.style.top = value*0 + 'px';
+            text.style.marginLeft = value*3 + 'px';
+            text.style.marginTop = value*1.5 + 'px';
+        });
+
+
+    </script>
+</body>
+</html>
